@@ -660,3 +660,10 @@ footer small {
 .route-btn:active {
   transform: scale(.97);
 }
+.hero-photo {
+  background-image: url("https://i.ibb.co/FLd4H2Ht/IMG-4786.jpg") !important;
+}
+
+.family-photo {
+  background-image: url("https://i.ibb.co/zVHqNwfG/Family.jpg") !important;
+}
