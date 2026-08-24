@@ -1,164 +1,296 @@
-<link rel="stylesheet" href="style.css">
-<div class="page">
+<link rel="stylesheet" href="./style.css">
+<main class="invitation">
 
-  <section class="hero reveal">
-    <div class="flowers top-left">❀</div>
-    <div class="flowers top-right">❀</div>
+  <!-- Первый экран -->
 
-    <p class="eyebrow">ДОРОГИЕ ДРУЗЬЯ И БЛИЗКИЕ!</p>
+  <section class="hero">
 
-    <div class="mini-line">
-      <span></span>
-      ♡
-      <span></span>
+    <div class="hero-photo"></div>
+
+    <div class="hero-top">
+      <p class="eyebrow">ПРИГЛАШЕНИЕ НА СВАДЬБУ</p>
+
+      <h1>
+        <span>Шораан</span>
+        <i>&</i>
+        <span>Чаяна</span>
+      </h1>
+
+      <p class="hero-date">14 · 11 · 2026</p>
     </div>
 
-    <h1>
-      <span>Шораан</span>
-      <b>&</b>
-      <span>Чаяна</span>
-    </h1>
-
-    <p class="intro">
-      Приглашаем вас разделить с нами<br>
-      самый важный день — нашу свадьбу
-    </p>
-
-    <div class="date">
-      <div class="big-date">14.11.2026</div>
-      <div class="date-text">14 ноября 2026</div>
+    <div class="hero-bottom">
+      <span>КЫЗЫЛ</span>
+      <span>СУББОТА</span>
     </div>
+
+    <a href="#invitation" class="scroll-down" aria-label="Листать ниже">
+      ↓
+    </a>
+
   </section>
 
+  <!-- Приглашение -->
 
-  <section class="card venue reveal">
-    <div class="icon">⌖</div>
+  <section id="invitation" class="section intro reveal">
 
-    <p class="small-title">МЕСТО ПРОВЕДЕНИЯ</p>
+    <div class="botanical botanical-left" aria-hidden="true">
+      <svg viewBox="0 0 180 280">
+        <path d="M24 268 C60 200, 102 139, 148 22" />
+        <path d="M47 231 C12 224, 13 190, 30 168 C52 184, 56 210, 47 231Z" />
+        <path d="M66 202 C96 191, 115 166, 112 139 C86 147, 68 172, 66 202Z" />
+        <path d="M85 165 C48 161, 43 131, 57 108 C78 119, 90 139, 85 165Z" />
+        <path d="M106 127 C135 120, 153 98, 151 76 C125 80, 107 100, 106 127Z" />
+        <path d="M122 91 C99 80, 94 60, 106 40 C124 52, 130 69, 122 91Z" />
+      </svg>
+    </div>
 
-    <h2>Банкетный зал<br>«Кызыл-сай»</h2>
+    <p class="eyebrow">НАШ ДЕНЬ</p>
 
-    <div class="divider">♡</div>
+    <h2 class="section-title">
+      Дорогие<br>
+      <em>родные и друзья!</em>
+    </h2>
 
-    <p>
-      Вячеслава Даржаа, д. 6
+    <p class="intro-text">
+      Есть моменты, которые хочется прожить
+      рядом с самыми близкими людьми.
+      Именно поэтому мы будем счастливы
+      видеть вас на нашем празднике.
     </p>
-    <a
-  class="route-btn"
-  href="https://maps.app.goo.gl/irEM2JhNv54hBJu16?g_st=ic"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  📍 Построить маршрут
-</a>
+
+    <div class="signature">
+      Шораан <span>&</span> Чаяна
+    </div>
+
   </section>
 
+  <!-- Календарь -->
 
-  <section class="program reveal">
+  <section class="section calendar-section reveal">
 
-    <p class="small-title">ПРОГРАММА ДНЯ</p>
+    <p class="eyebrow">СОХРАНИТЕ ЭТУ ДАТУ</p>
+
+    <h2 class="section-title">
+      Ноябрь<br>
+      <em>2026</em>
+    </h2>
+
+    <div class="calendar-wrap">
+
+      <canvas id="fireworks" aria-hidden="true"></canvas>
+
+      <div class="calendar">
+
+        <div class="weekday">ПН</div>
+        <div class="weekday">ВТ</div>
+        <div class="weekday">СР</div>
+        <div class="weekday">ЧТ</div>
+        <div class="weekday">ПТ</div>
+        <div class="weekday">СБ</div>
+        <div class="weekday">ВС</div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>1</div>
+
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+
+        <div class="selected-day" id="weddingDay">
+          <span>14</span>
+        </div>
+
+        <div>15</div>
+
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+        <div>29</div>
+
+        <div>30</div>
+
+      </div>
+
+    </div>
+
+    <p class="calendar-note">суббота · 14 ноября</p>
+
+  </section>
+
+  <!-- Программа -->
+
+  <section class="section timeline-section reveal">
+
+    <div class="botanical botanical-right" aria-hidden="true">
+      <svg viewBox="0 0 180 280">
+        <path d="M24 268 C60 200, 102 139, 148 22" />
+        <path d="M47 231 C12 224, 13 190, 30 168 C52 184, 56 210, 47 231Z" />
+        <path d="M66 202 C96 191, 115 166, 112 139 C86 147, 68 172, 66 202Z" />
+        <path d="M85 165 C48 161, 43 131, 57 108 C78 119, 90 139, 85 165Z" />
+        <path d="M106 127 C135 120, 153 98, 151 76 C125 80, 107 100, 106 127Z" />
+        <path d="M122 91 C99 80, 94 60, 106 40 C124 52, 130 69, 122 91Z" />
+      </svg>
+    </div>
+
+    <p class="eyebrow">КАК ПРОЙДЁТ ЭТОТ ДЕНЬ</p>
+
+    <h2 class="section-title">
+      Программа<br>
+      <em>праздника</em>
+    </h2>
 
     <div class="timeline">
 
-      <div class="event">
-        <div class="time">10:00</div>
-        <div class="event-text">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+
+        <div>
+          <p class="timeline-time">УТРО</p>
           <h3>Выкуп невесты</h3>
-          <p>Начинаем наш особенный день</p>
+          <p>
+            Начало нашего дня —
+            с улыбок, волнения
+            и красивых традиций.
+          </p>
         </div>
       </div>
 
-      <div class="event">
-        <div class="time">17:00</div>
-        <div class="event-text">
-          <h3>Начало банкета</h3>
-          <p>Банкетный зал «Кызыл-сай»</p>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+
+        <div>
+          <p class="timeline-time">ДЕНЬ</p>
+          <h3>Время для молодёжи</h3>
+          <p>
+            Прогулка, фотографии
+            и отдых в кругу друзей.
+          </p>
         </div>
       </div>
 
-    </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
 
-    <div class="important">
-      ♡ Просим вас не опаздывать
+        <div>
+          <p class="timeline-time">17:00</p>
+          <h3>Праздничный банкет</h3>
+          <p>
+            Встречаемся вместе
+            с родными и близкими
+            в банкетном зале «Кызыл-сай».
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </section>
 
+  <!-- Банкетный зал -->
 
-  <section class="calendar reveal">
+  <section class="section location-section reveal">
 
-    <p class="small-title">НОЯБРЬ 2026</p>
+    <p class="eyebrow">МЕСТО ВСТРЕЧИ</p>
 
-    <div class="calendar-grid header">
-      <span>Пн</span>
-      <span>Вт</span>
-      <span>Ср</span>
-      <span>Чт</span>
-      <span>Пт</span>
-      <span>Сб</span>
-      <span>Вс</span>
-    </div>
+    <h2 class="section-title">
+      Кызыл-сай<br>
+      <em>банкетный зал</em>
+    </h2>
 
-    <div class="calendar-grid days">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span>1</span>
+    <div class="location-card">
 
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
-      <span>5</span>
-      <span>6</span>
-      <span>7</span>
-      <span>8</span>
+      <p class="location-floor">2 ЭТАЖ</p>
 
-      <span>9</span>
-      <span>10</span>
-      <span>11</span>
-      <span>12</span>
-      <span>13</span>
-      <span class="wedding-day">14</span>
-      <span>15</span>
+      <p class="location-address">
+        г. Кызыл<br>
+        ул. Вячеслава Даржаа, д. 6
+      </p>
 
-      <span>16</span>
-      <span>17</span>
-      <span>18</span>
-      <span>19</span>
-      <span>20</span>
-      <span>21</span>
-      <span>22</span>
+      <p class="location-time">
+        Сбор гостей в 17:00
+      </p>
 
-      <span>23</span>
-      <span>24</span>
-      <span>25</span>
-      <span>26</span>
-      <span>27</span>
-      <span>28</span>
-      <span>29</span>
+      <a
+        class="route-button"
+        href="https://yandex.ru/maps/?rtext=~Кызыл%2C%20улица%20Вячеслава%20Даржаа%2C%206&rtt=auto"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Построить маршрут
+        <span>↗</span>
+      </a>
 
-      <span>30</span>
     </div>
 
   </section>
 
+  <!-- Семейная фотография -->
 
-  <section class="rsvp reveal">
+  <section class="family-section reveal">
 
-    <p class="small-title">ПОДТВЕРДИТЕ УЧАСТИЕ</p>
+    <div class="family-photo">
 
-    <h2>Будете ли вы с нами?</h2>
+      <div class="family-title">
+  <span>Ждём вас разделить с нами</span>
+  <strong>этот особенный праздник</strong>
+</div>
 
-    <p class="rsvp-text">
-      Пожалуйста, сообщите нам заранее,
-      сможете ли вы присутствовать на торжестве
+
+      <div class="family-bottom">
+        <p>С любовью,</p>
+        <h2>Шораан и Чаяна</h2>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Анкета гостей -->
+
+  <section class="section rsvp-section reveal">
+
+    <p class="eyebrow">БУДЕМ ЖДАТЬ ВАС</p>
+
+    <h2 class="section-title">
+      Анкета<br>
+      <em>для гостей</em>
+    </h2>
+
+    <p class="rsvp-description">
+      Пожалуйста, сообщите,
+      сможете ли вы разделить
+      этот день вместе с нами.
     </p>
 
-
     <form
+      class="rsvp-form"
       action="https://formsubmit.co/dembirelch@mail.ru"
       method="POST"
     >
@@ -166,7 +298,7 @@
       <input
         type="hidden"
         name="_subject"
-        value="Новый ответ гостя — свадьба Шораан и Чаяна"
+        value="Ответ гостя: свадьба Шораана и Чаяны"
       >
 
       <input
@@ -175,63 +307,67 @@
         value="false"
       >
 
-      <label>
-        Ваше имя
-        <input
-          type="text"
-          name="Имя гостя"
-          placeholder="Введите имя"
-          required
-        >
-      </label>
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
 
+      <label for="guestName">Ваше имя и фамилия</label>
 
-      <label>
-        Номер телефона
-        <input
-          type="tel"
-          name="Телефон"
-          placeholder="+7..."
-        >
-      </label>
+      <input
+        id="guestName"
+        type="text"
+        name="Имя гостя"
+        placeholder="Например, Айлана Монгуш"
+        required
+      >
 
+      <label for="attendance">Сможете прийти?</label>
 
-      <div class="choice-title">
-        Вы сможете присутствовать?
-      </div>
+      <select
+        id="attendance"
+        name="Присутствие"
+        required
+      >
+        <option value="" selected disabled>
+          Выберите ответ
+        </option>
 
-      <label class="radio">
-        <input
-          type="radio"
-          name="Ответ"
-          value="С радостью приду"
-          required
-        >
-        <span>С радостью приду ♡</span>
-      </label>
+        <option value="С удовольствием приду">
+          С удовольствием приду
+        </option>
 
-      <label class="radio">
-        <input
-          type="radio"
-          name="Ответ"
-          value="К сожалению, не смогу"
-          required
-        >
-        <span>К сожалению, не смогу</span>
-      </label>
+        <option value="К сожалению, не смогу">
+          К сожалению, не смогу
+        </option>
 
+        <option value="Пока не знаю, сообщу позже">
+          Пока не знаю, сообщу позже
+        </option>
+      </select>
 
-      <label>
-        Количество гостей
-        <select name="Количество гостей">
-          <option value="1">1 гость</option>
-          <option value="2">2 гостя</option>
-          <option value="3">3 гостя</option>
-          <option value="4">4 гостя</option>
-          <option value="5+">5 и более</option>
-        </select>
-      </label>
+      <label for="guestCount">Количество гостей</label>
 
+      <select
+        id="guestCount"
+        name="Количество гостей"
+      >
+        <option value="1">1 гость</option>
+        <option value="2">2 гостя</option>
+        <option value="3">3 гостя</option>
+        <option value="4">4 гостя</option>
+        <option value="5 и больше">5 и больше</option>
+      </select>
+
+      <label for="guestMessage">Пожелание молодожёнам</label>
+
+      <textarea
+        id="guestMessage"
+        name="Пожелание"
+        rows="3"
+        placeholder="По желанию"
+      ></textarea>
 
       <button type="submit">
         Отправить ответ
@@ -241,19 +377,10 @@
 
   </section>
 
-
-  <footer class="reveal">
-    <div class="heart">♡</div>
-
-    <p>
-      Будем счастливы видеть вас<br>
-      среди наших гостей
-    </p>
-
-    <h3>Шораан & Чаяна</h3>
-
-    <small>14.11.2026</small>
+  <footer class="footer">
+    <p>ШОРААН & ЧАЯНА</p>
+    <span>14 · 11 · 2026</span>
   </footer>
 
-</div>
-<script src="script.js"></script>
+</main>
+<script src="./script.js"></script>
