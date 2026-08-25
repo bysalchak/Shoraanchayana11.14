@@ -828,3 +828,38 @@ body {
   font-style: italic;
   color: #737d60;
 }
+/* Сайт занимает всю ширину телефона */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.invitation {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Заголовки больше не налезают друг на друга */
+.section-title {
+  font-size: 46px;
+  line-height: 1.15;
+  letter-spacing: normal;
+}
+
+.section-title em {
+  display: block;
+  margin-top: 5px;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+/* Обычный текст становится читаемым */
+.intro-text,
+.rsvp-description {
+  font-size: 14px;
+  line-height: 1.7;
+}
