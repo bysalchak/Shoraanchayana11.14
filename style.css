@@ -863,3 +863,10 @@ body {
   font-size: 14px;
   line-height: 1.7;
 }
+.hero-photo {
+  background-image: url("https://i.ibb.co/FkDD8WQ6/IMG-1497.jpg") !important;
+}
+
+.family-photo {
+  background-image: url("https://i.ibb.co/kgkrwGc1/IMG-1498.jpg") !important;
+}
