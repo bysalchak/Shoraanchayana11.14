@@ -1,387 +1,641 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./style.css">
-<main class="invitation">
+<!DOCTYPE html>
+<html lang="ru">
 
-  <!-- Первый экран -->
+<head>
+  <meta charset="UTF-8">
 
-  <section class="hero">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-    <div class="hero-photo"></div>
+  <meta
+    name="theme-color"
+    content="#faf8f4"
+  >
 
-    <div class="hero-top">
-      <p class="eyebrow">ПРИГЛАШЕНИЕ НА СВАДЬБУ</p>
+  <meta
+    name="description"
+    content="Приглашение на праздник Шораана и Чаяны. 14 ноября 2026 года."
+  >
 
-      <h1>
-        <span>Шораан</span>
-        <i>&</i>
-        <span>Чаяна</span>
-      </h1>
+  <title>Шораан и Чаяна — 14.11.2026</title>
 
-      <p class="hero-date">14 · 11 · 2026</p>
-    </div>
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-    <div class="hero-bottom">
-      <span>КЫЗЫЛ</span>
-      <span>СУББОТА</span>
-    </div>
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-    <a href="#invitation" class="scroll-down" aria-label="Листать ниже">
-      ↓
-    </a>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
-  </section>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-  <!-- Приглашение -->
+<body>
 
-  <section id="invitation" class="section intro reveal">
+  <main class="invitation">
 
-    <div class="botanical botanical-left" aria-hidden="true">
-      <svg viewBox="0 0 180 280">
-        <path d="M24 268 C60 200, 102 139, 148 22" />
-        <path d="M47 231 C12 224, 13 190, 30 168 C52 184, 56 210, 47 231Z" />
-        <path d="M66 202 C96 191, 115 166, 112 139 C86 147, 68 172, 66 202Z" />
-        <path d="M85 165 C48 161, 43 131, 57 108 C78 119, 90 139, 85 165Z" />
-        <path d="M106 127 C135 120, 153 98, 151 76 C125 80, 107 100, 106 127Z" />
-        <path d="M122 91 C99 80, 94 60, 106 40 C124 52, 130 69, 122 91Z" />
-      </svg>
-    </div>
+    <!-- ТИТУЛЬНАЯ ФОТОГРАФИЯ -->
 
-    <p class="eyebrow">НАШ ДЕНЬ</p>
+    <section class="hero">
 
-    <h2 class="section-title">
-      Дорогие<br>
-      <em>родные и друзья!</em>
-    </h2>
+      <img
+        class="hero-image"
+        src="https://i.ibb.co/FkDD8WQ6/IMG-1497.jpg"
+        alt="Шораан и Чаяна"
+        fetchpriority="high"
+      >
 
-    <p class="intro-text">
-      Есть моменты, которые хочется прожить
-      рядом с самыми близкими людьми.
-      Именно поэтому мы будем счастливы
-      видеть вас на нашем празднике.
-    </p>
+      <div class="hero-heading">
 
-    <div class="signature">
-      Шораан <span>&</span> Чаяна
-    </div>
+        <p class="eyebrow">
+          ПРИГЛАШЕНИЕ НА СВАДЬБУ
+        </p>
 
-  </section>
-
-  <!-- Календарь -->
-
-  <section class="section calendar-section reveal">
-
-    <p class="eyebrow">СОХРАНИТЕ ЭТУ ДАТУ</p>
-
-    <h2 class="section-title">
-      Ноябрь<br>
-      <em>2026</em>
-    </h2>
-
-    <div class="calendar-wrap">
-
-      <canvas id="fireworks" aria-hidden="true"></canvas>
-
-      <div class="calendar">
-
-        <div class="weekday">ПН</div>
-        <div class="weekday">ВТ</div>
-        <div class="weekday">СР</div>
-        <div class="weekday">ЧТ</div>
-        <div class="weekday">ПТ</div>
-        <div class="weekday">СБ</div>
-        <div class="weekday">ВС</div>
-
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div>1</div>
-
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
-        <div>13</div>
-
-        <div class="selected-day" id="weddingDay">
-          <span>14</span>
-        </div>
-
-        <div>15</div>
-
-        <div>16</div>
-        <div>17</div>
-        <div>18</div>
-        <div>19</div>
-        <div>20</div>
-        <div>21</div>
-        <div>22</div>
-
-        <div>23</div>
-        <div>24</div>
-        <div>25</div>
-        <div>26</div>
-        <div>27</div>
-        <div>28</div>
-        <div>29</div>
-
-        <div>30</div>
+        <h1>
+          Шораан <span>&</span> Чаяна
+        </h1>
 
       </div>
 
-    </div>
+      <div class="hero-footer">
 
-    <p class="calendar-note">суббота · 14 ноября</p>
+        <span>КЫЗЫЛ</span>
 
-  </section>
+        <span class="hero-date">
+          14 · 11 · 2026
+        </span>
 
-  <!-- Программа -->
+        <span>СУББОТА</span>
 
-  <section class="section timeline-section reveal">
-
-    <div class="botanical botanical-right" aria-hidden="true">
-      <svg viewBox="0 0 180 280">
-        <path d="M24 268 C60 200, 102 139, 148 22" />
-        <path d="M47 231 C12 224, 13 190, 30 168 C52 184, 56 210, 47 231Z" />
-        <path d="M66 202 C96 191, 115 166, 112 139 C86 147, 68 172, 66 202Z" />
-        <path d="M85 165 C48 161, 43 131, 57 108 C78 119, 90 139, 85 165Z" />
-        <path d="M106 127 C135 120, 153 98, 151 76 C125 80, 107 100, 106 127Z" />
-        <path d="M122 91 C99 80, 94 60, 106 40 C124 52, 130 69, 122 91Z" />
-      </svg>
-    </div>
-
-    <p class="eyebrow">КАК ПРОЙДЁТ ЭТОТ ДЕНЬ</p>
-
-    <h2 class="section-title">
-      Программа<br>
-      <em>праздника</em>
-    </h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-
-        <div>
-          <p class="timeline-time">УТРО</p>
-          <h3>Выкуп невесты</h3>
-          <p>
-            Начало нашего дня —
-            с улыбок, волнения
-            и красивых традиций.
-          </p>
-        </div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-
-        <div>
-          <p class="timeline-time">ДЕНЬ</p>
-          <h3>Время для молодёжи</h3>
-          <p>
-            Прогулка, фотографии
-            и отдых в кругу друзей.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-
-        <div>
-          <p class="timeline-time">17:00</p>
-          <h3>Праздничный банкет</h3>
-          <p>
-            Встречаемся вместе
-            с родными и близкими
-            в банкетном зале «Кызыл-сай».
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Банкетный зал -->
-
-  <section class="section location-section reveal">
-
-    <p class="eyebrow">МЕСТО ВСТРЕЧИ</p>
-
-    <h2 class="section-title">
-      Кызыл-сай<br>
-      <em>банкетный зал</em>
-    </h2>
-
-    <div class="location-card">
-
-      <p class="location-floor">2 ЭТАЖ</p>
-
-      <p class="location-address">
-        г. Кызыл<br>
-        ул. Вячеслава Даржаа, д. 6
-      </p>
-
-      <p class="location-time">
-        Сбор гостей в 17:00
-      </p>
 
       <a
-        class="route-button"
-        href="https://yandex.ru/maps/?rtext=~Кызыл%2C%20улица%20Вячеслава%20Даржаа%2C%206&rtt=auto"
-        target="_blank"
-        rel="noopener noreferrer"
+        class="scroll-hint"
+        href="#invitation"
+        aria-label="Перейти к приглашению"
       >
-        Построить маршрут
-        <span>↗</span>
+        ↓
       </a>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- ПРИГЛАШЕНИЕ -->
 
-  <!-- Семейная фотография -->
-
-  <section class="family-section reveal">
-
-    <div class="family-photo">
-
-      <div class="family-title">
-  <span>Ждём вас разделить с нами</span>
-  <strong>этот особенный праздник</strong>
-</div>
-
-
-      <div class="family-bottom">
-        <p>С любовью,</p>
-        <h2>Шораан и Чаяна</h2>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Анкета гостей -->
-
-  <section class="section rsvp-section reveal">
-
-    <p class="eyebrow">БУДЕМ ЖДАТЬ ВАС</p>
-
-    <h2 class="section-title">
-      Анкета<br>
-      <em>для гостей</em>
-    </h2>
-
-    <p class="rsvp-description">
-      Пожалуйста, сообщите,
-      сможете ли вы разделить
-      этот день вместе с нами.
-    </p>
-
-    <form
-      class="rsvp-form"
-      action="https://formsubmit.co/dembirelch@mail.ru"
-      method="POST"
+    <section
+      id="invitation"
+      class="section intro reveal"
     >
 
-      <input
-        type="hidden"
-        name="_subject"
-        value="Ответ гостя: свадьба Шораана и Чаяны"
+      <svg
+        class="botanical botanical-left"
+        viewBox="0 0 180 280"
+        aria-hidden="true"
       >
 
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
+        <path d="M24 268 C60 200, 102 139, 148 22" />
+
+        <path d="M47 231 C12 224, 13 190, 30 168 C52 184, 56 210, 47 231Z" />
+
+        <path d="M66 202 C96 191, 115 166, 112 139 C86 147, 68 172, 66 202Z" />
+
+        <path d="M85 165 C48 161, 43 131, 57 108 C78 119, 90 139, 85 165Z" />
+
+        <path d="M106 127 C135 120, 153 98, 151 76 C125 80, 107 100, 106 127Z" />
+
+        <path d="M122 91 C99 80, 94 60, 106 40 C124 52, 130 69, 122 91Z" />
+
+      </svg>
+
+      <p class="eyebrow">НАШ ДЕНЬ</p>
+
+      <h2 class="section-title">
+
+        <span>Дорогие</span>
+
+        <em>родные и друзья!</em>
+
+      </h2>
+
+      <p class="intro-text">
+
+        Есть моменты, которые хочется прожить рядом
+        с самыми близкими людьми. Именно поэтому
+        мы будем счастливы видеть вас
+        на нашем празднике.
+
+      </p>
+
+      <p class="signature">
+
+        Шораан <span>&</span> Чаяна
+
+      </p>
+
+    </section>
+
+    <!-- КАЛЕНДАРЬ -->
+
+    <section class="section calendar-section reveal">
+
+      <p class="eyebrow">
+
+        СОХРАНИТЕ ЭТУ ДАТУ
+
+      </p>
+
+      <h2 class="section-title">
+
+        <span>Ноябрь</span>
+
+        <em>2026</em>
+
+      </h2>
+
+      <div class="calendar-wrap">
+
+        <canvas
+          id="fireworks"
+          aria-hidden="true"
+        ></canvas>
+
+        <div class="calendar">
+
+          <div class="weekday">ПН</div>
+          <div class="weekday">ВТ</div>
+          <div class="weekday">СР</div>
+          <div class="weekday">ЧТ</div>
+          <div class="weekday">ПТ</div>
+          <div class="weekday">СБ</div>
+          <div class="weekday">ВС</div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div>1</div>
+
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+          <div>13</div>
+
+          <div
+            class="selected-day"
+            id="weddingDay"
+          >
+            <span>14</span>
+          </div>
+
+          <div>15</div>
+
+          <div>16</div>
+          <div>17</div>
+          <div>18</div>
+          <div>19</div>
+          <div>20</div>
+          <div>21</div>
+          <div>22</div>
+
+          <div>23</div>
+          <div>24</div>
+          <div>25</div>
+          <div>26</div>
+          <div>27</div>
+          <div>28</div>
+          <div>29</div>
+
+          <div>30</div>
+
+        </div>
+
+      </div>
+
+      <p class="calendar-note">
+
+        суббота · 14 ноября
+
+      </p>
+
+    </section>
+
+    <!-- ПРОГРАММА -->
+
+    <section class="section timeline-section reveal">
+
+      <svg
+        class="botanical botanical-right"
+        viewBox="0 0 180 280"
+        aria-hidden="true"
       >
 
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
+        <path d="M24 268 C60 200, 102 139, 148 22" />
+
+        <path d="M47 231 C12 224, 13 190, 30 168 C52 184, 56 210, 47 231Z" />
+
+        <path d="M66 202 C96 191, 115 166, 112 139 C86 147, 68 172, 66 202Z" />
+
+        <path d="M85 165 C48 161, 43 131, 57 108 C78 119, 90 139, 85 165Z" />
+
+        <path d="M106 127 C135 120, 153 98, 151 76 C125 80, 107 100, 106 127Z" />
+
+        <path d="M122 91 C99 80, 94 60, 106 40 C124 52, 130 69, 122 91Z" />
+
+      </svg>
+
+      <p class="eyebrow">
+
+        КАК ПРОЙДЁТ ЭТОТ ДЕНЬ
+
+      </p>
+
+      <h2 class="section-title">
+
+        <span>Программа</span>
+
+        <em>праздника</em>
+
+      </h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+
+          <span class="timeline-marker"></span>
+
+          <div>
+
+            <p class="timeline-time">УТРО</p>
+
+            <h3>Выкуп невесты</h3>
+
+            <p>
+
+              Начинаем день с улыбок,
+              красивых традиций
+              и праздничного настроения.
+
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="timeline-item">
+
+          <span class="timeline-marker"></span>
+
+          <div>
+
+            <p class="timeline-time">ДЕНЬ</p>
+
+            <h3>Время с друзьями</h3>
+
+            <p>
+
+              Прогулка, фотографии
+              и отдых в кругу молодёжи.
+
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="timeline-item">
+
+          <span class="timeline-marker"></span>
+
+          <div>
+
+            <p class="timeline-time">17:00</p>
+
+            <h3>Праздничный банкет</h3>
+
+            <p>
+
+              Встречаемся с родными и близкими
+              в банкетном зале «Кызыл-сай».
+
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- АДРЕС -->
+
+    <section class="section location-section reveal">
+
+      <p class="eyebrow">
+
+        МЕСТО ВСТРЕЧИ
+
+      </p>
+
+      <h2 class="section-title">
+
+        <span>Кызыл-сай</span>
+
+        <em>банкетный зал</em>
+
+      </h2>
+
+      <div class="location-card">
+
+        <p class="location-floor">
+
+          2 ЭТАЖ
+
+        </p>
+
+        <p class="location-address">
+
+          г. Кызыл<br>
+
+          ул. Вячеслава Даржаа, д. 6
+
+        </p>
+
+        <p class="location-time">
+
+          Сбор гостей в 17:00
+
+        </p>
+
+        <a
+          class="route-button"
+          href="https://yandex.ru/maps/?rtext=~Кызыл%2C%20улица%20Вячеслава%20Даржаа%2C%206&rtt=auto"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Построить маршрут
+
+          <span>↗</span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- СЕМЕЙНАЯ ФОТОГРАФИЯ -->
+
+    <section class="family-section reveal">
+
+      <div class="family-photo">
+
+        <img
+          class="family-image"
+          src="https://i.ibb.co/kgkrwGc1/IMG-1498.jpg"
+          alt="Шораан, Чаяна и их дети"
+          loading="lazy"
+        >
+
+        <div class="family-title">
+
+          <span>
+
+            Ждём вас разделить с нами
+
+          </span>
+
+          <strong>
+
+            этот особенный праздник
+
+          </strong>
+
+        </div>
+
+        <div class="family-bottom">
+
+          <p>С любовью,</p>
+
+          <h2>Шораан и Чаяна</h2>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- АНКЕТА -->
+
+    <section class="section rsvp-section reveal">
+
+      <p class="eyebrow">
+
+        БУДЕМ ЖДАТЬ ВАС
+
+      </p>
+
+      <h2 class="section-title">
+
+        <span>Анкета</span>
+
+        <em>для гостей</em>
+
+      </h2>
+
+      <p class="rsvp-description">
+
+        Пожалуйста, сообщите, сможете ли вы
+        разделить этот день вместе с нами.
+
+      </p>
+
+      <form
+        class="rsvp-form"
+        action="https://formsubmit.co/dembirelch@mail.ru"
+        method="POST"
       >
 
-      <label for="guestName">Ваше имя и фамилия</label>
+        <input
+          type="hidden"
+          name="_subject"
+          value="Ответ гостя: праздник Шораана и Чаяны"
+        >
 
-      <input
-        id="guestName"
-        type="text"
-        name="Имя гостя"
-        placeholder="Например, Айлана Монгуш"
-        required
-      >
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
 
-      <label for="attendance">Сможете прийти?</label>
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
 
-      <select
-        id="attendance"
-        name="Присутствие"
-        required
-      >
-        <option value="" selected disabled>
-          Выберите ответ
-        </option>
+        <label for="guestName">
 
-        <option value="С удовольствием приду">
-          С удовольствием приду
-        </option>
+          Ваше имя и фамилия
 
-        <option value="К сожалению, не смогу">
-          К сожалению, не смогу
-        </option>
+        </label>
 
-        <option value="Пока не знаю, сообщу позже">
-          Пока не знаю, сообщу позже
-        </option>
-      </select>
+        <input
+          id="guestName"
+          name="Имя гостя"
+          type="text"
+          placeholder="Напишите ваше имя"
+          required
+        >
 
-      <label for="guestCount">Количество гостей</label>
+        <label for="attendance">
 
-      <select
-        id="guestCount"
-        name="Количество гостей"
-      >
-        <option value="1">1 гость</option>
-        <option value="2">2 гостя</option>
-        <option value="3">3 гостя</option>
-        <option value="4">4 гостя</option>
-        <option value="5 и больше">5 и больше</option>
-      </select>
+          Сможете прийти?
 
-      <label for="guestMessage">Пожелание молодожёнам</label>
+        </label>
 
-      <textarea
-        id="guestMessage"
-        name="Пожелание"
-        rows="3"
-        placeholder="По желанию"
-      ></textarea>
+        <select
+          id="attendance"
+          name="Присутствие"
+          required
+        >
 
-      <button type="submit">
-        Отправить ответ
-      </button>
+          <option
+            value=""
+            selected
+            disabled
+          >
 
-    </form>
+            Выберите ответ
 
-  </section>
+          </option>
 
-  <footer class="footer">
-    <p>ШОРААН & ЧАЯНА</p>
-    <span>14 · 11 · 2026</span>
-  </footer>
+          <option value="С удовольствием приду">
 
-</main>
-<script src="./script.js"></script>
+            С удовольствием приду
+
+          </option>
+
+          <option value="К сожалению, не смогу">
+
+            К сожалению, не смогу
+
+          </option>
+
+          <option value="Пока не знаю">
+
+            Пока не знаю
+
+          </option>
+
+        </select>
+
+        <label for="guestCount">
+
+          Количество гостей
+
+        </label>
+
+        <select
+          id="guestCount"
+          name="Количество гостей"
+        >
+
+          <option value="1">
+
+            1 гость
+
+          </option>
+
+          <option value="2">
+
+            2 гостя
+
+          </option>
+
+          <option value="3">
+
+            3 гостя
+
+          </option>
+
+          <option value="4">
+
+            4 гостя
+
+          </option>
+
+          <option value="5 и больше">
+
+            5 и больше
+
+          </option>
+
+        </select>
+
+        <label for="guestMessage">
+
+          Пожелание
+
+        </label>
+
+        <textarea
+          id="guestMessage"
+          name="Пожелание"
+          rows="3"
+          placeholder="По желанию"
+        ></textarea>
+
+        <button type="submit">
+
+          Отправить ответ
+
+        </button>
+
+      </form>
+
+    </section>
+
+    <footer class="footer">
+
+      <p>
+
+        ШОРААН & ЧАЯНА
+
+      </p>
+
+      <span>
+
+        14 · 11 · 2026
+
+      </span>
+
+    </footer>
+
+  </main>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
