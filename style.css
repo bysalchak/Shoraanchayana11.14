@@ -1,85 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap");
-
 :root {
   --cream: #faf8f4;
-  --paper: #f5f2eb;
-  --ink: #292a25;
-  --muted: #8c8a80;
-  --olive: #737d60;
-  --olive-dark: #586247;
-  --line: rgba(91, 98, 79, 0.2);
+  --paper: #f4f1ea;
+  --ink: #30312c;
+  --muted: #858378;
+  --olive: #798264;
+  --olive-dark: #606a50;
+  --line: rgba(99, 108, 83, 0.22);
+
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", Arial, sans-serif;
-
-  
-  --cover-image: url("https://i.ibb.co/FLd4H2Ht/IMG-4786.jpg");
---family-image: url("https://i.ibb.co/zVHqNwfG/Family.jpg");
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
+  min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   background: #e9e6df;
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .invitation {
-  width: min(100%, 520px);
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
   overflow: hidden;
   background: var(--cream);
-  box-shadow: 0 0 80px rgba(40, 35, 27, 0.08);
+  box-shadow: 0 0 60px rgba(36, 34, 27, 0.07);
 }
+
+/* ТИТУЛЬНЫЙ ЭКРАН */
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  width: 100%;
   overflow: hidden;
   background: #efedeb;
 }
 
-.hero-photo {
-  position: absolute;
-  inset: 0;
-  background-image: var(--cover-image);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-}
-
-.hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(248, 247, 245, 0.72) 0%,
-      rgba(248, 247, 245, 0.34) 19%,
-      rgba(248, 247, 245, 0) 38%
-    ),
-    linear-gradient(
-      to top,
-      rgba(248, 247, 245, 0.8) 0%,
-      rgba(248, 247, 245, 0) 24%
-    );
-}
-
-.hero-top {
-  position: absolute;
-  top: clamp(43px, 9vh, 100px);
-  left: 0;
-  z-index: 2;
+.hero-image {
   width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-heading {
+  position: absolute;
+  top: 5%;
+  right: 12px;
+  left: 12px;
+  z-index: 2;
   text-align: center;
 }
 
@@ -88,115 +79,118 @@ body {
   color: var(--olive);
   font-size: 9px;
   font-weight: 500;
-  letter-spacing: 0.29em;
-  line-height: 1.8;
+  letter-spacing: 0.2em;
+  line-height: 1.7;
 }
 
-.hero h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 15px 0 8px;
-  font-family: var(--serif);
-  font-size: clamp(38px, 10.2vw, 55px);
-  font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 1;
-}
-
-.hero h1 i {
-  color: var(--olive);
-  font-size: 0.66em;
-  font-weight: 400;
-}
-
-.hero-date {
-  margin: 12px 0 0;
+.hero-heading h1 {
+  margin: 10px 0 0;
   color: var(--ink);
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-family: var(--serif);
+  font-size: clamp(35px, 9.4vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  white-space: nowrap;
 }
 
-.hero-bottom {
+.hero-heading h1 span {
+  color: var(--olive);
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+.hero-footer {
   position: absolute;
-  right: 28px;
-  bottom: 34px;
-  left: 28px;
+  right: 20px;
+  bottom: 5%;
+  left: 20px;
   z-index: 2;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: var(--olive-dark);
   font-size: 9px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.11em;
 }
 
-.scroll-down {
+.hero-date {
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.scroll-hint {
   position: absolute;
-  bottom: 63px;
+  bottom: 9%;
   left: 50%;
   z-index: 2;
-  color: var(--olive-dark);
-  font-size: 20px;
+  color: var(--olive);
+  font-size: 19px;
   text-decoration: none;
   transform: translateX(-50%);
-  animation: float-down 1.8s ease-in-out infinite;
+  animation: scroll-down 1.8s ease-in-out infinite;
 }
 
-@keyframes float-down {
+@keyframes scroll-down {
   0%,
   100% {
     transform: translate(-50%, 0);
   }
 
   50% {
-    transform: translate(-50%, 7px);
+    transform: translate(-50%, 6px);
   }
 }
 
+/* ОБЩЕЕ ОФОРМЛЕНИЕ */
+
 .section {
   position: relative;
-  padding: 105px 34px;
+  padding: 68px 28px;
   text-align: center;
 }
 
 .section-title {
-  margin: 18px 0 25px;
+  margin: 15px 0 20px;
   font-family: var(--serif);
-  font-size: clamp(44px, 12vw, 62px);
+  font-size: clamp(40px, 11vw, 53px);
   font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.98;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.section-title span,
+.section-title em {
+  display: block;
 }
 
 .section-title em {
+  margin-top: 4px;
   color: var(--olive);
-  font-size: 0.76em;
+  font-size: 0.75em;
   font-weight: 400;
+  line-height: 1.14;
 }
 
 .intro {
-  min-height: 530px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  overflow: hidden;
 }
 
 .intro-text,
 .rsvp-description {
-  max-width: 285px;
+  max-width: 310px;
   margin: 0 auto;
-  color: #68665f;
-  font-size: 12px;
+  color: #6d6a61;
+  font-size: 13px;
   font-weight: 300;
-  line-height: 1.95;
+  line-height: 1.8;
 }
 
 .signature {
-  margin-top: 34px;
+  margin: 27px 0 0;
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 29px;
+  font-weight: 400;
 }
 
 .signature span {
@@ -206,39 +200,36 @@ body {
 .botanical {
   position: absolute;
   z-index: 0;
-  width: 115px;
+  width: 96px;
+  height: auto;
   pointer-events: none;
 }
 
-.botanical svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.botanical svg path:first-child {
+.botanical path:first-child {
   fill: none;
-  stroke: rgba(109, 125, 93, 0.46);
+  stroke: rgba(109, 125, 93, 0.42);
   stroke-width: 1.4;
 }
 
-.botanical svg path:not(:first-child) {
-  fill: rgba(123, 140, 107, 0.15);
-  stroke: rgba(109, 125, 93, 0.19);
+.botanical path:not(:first-child) {
+  fill: rgba(123, 140, 107, 0.14);
+  stroke: rgba(109, 125, 93, 0.17);
   stroke-width: 1;
 }
 
 .botanical-left {
-  top: 40px;
+  top: 32px;
   left: -35px;
-  transform: rotate(15deg);
+  transform: rotate(12deg);
 }
 
 .botanical-right {
-  top: 34px;
-  right: -35px;
-  transform: rotate(184deg);
+  top: 20px;
+  right: -36px;
+  transform: rotate(185deg);
 }
+
+/* КАЛЕНДАРЬ */
 
 .calendar-section {
   background: var(--paper);
@@ -248,32 +239,31 @@ body {
   position: relative;
   width: 100%;
   max-width: 340px;
-  margin: 35px auto 0;
+  margin: 29px auto 0;
 }
 
 .calendar {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12px 2px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px 1px;
   align-items: center;
 }
 
 .calendar > div {
   display: grid;
-  min-height: 34px;
+  min-height: 35px;
   place-items: center;
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .calendar > .weekday {
-  margin-bottom: 7px;
+  margin-bottom: 4px;
   color: var(--muted);
   font-family: var(--sans);
   font-size: 9px;
-  letter-spacing: 0.08em;
 }
 
 .selected-day {
@@ -287,14 +277,14 @@ body {
 }
 
 .selected-day::before {
-  content: "";
   position: absolute;
-  width: 37px;
-  height: 37px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--olive);
+  content: "";
   transform: scale(0);
-  transition: transform 0.55s cubic-bezier(0.2, 0.85, 0.2, 1.4);
+  transition: transform 0.5s cubic-bezier(0.2, 0.85, 0.2, 1.4);
 }
 
 .selected-day.active::before {
@@ -303,37 +293,39 @@ body {
 
 #fireworks {
   position: absolute;
-  inset: -55px;
+  inset: -50px;
   z-index: 3;
-  width: calc(100% + 110px);
-  height: calc(100% + 110px);
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
   pointer-events: none;
 }
 
 .calendar-note {
-  margin: 27px 0 0;
+  margin: 24px 0 0;
   color: var(--olive-dark);
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 22px;
   font-style: italic;
 }
+
+/* ПРОГРАММА */
 
 .timeline-section {
   overflow: hidden;
 }
 
 .timeline {
-  max-width: 265px;
-  margin: 54px auto 0;
+  max-width: 285px;
+  margin: 35px auto 0;
   text-align: left;
 }
 
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 25px 1fr;
-  gap: 18px;
-  padding-bottom: 40px;
+  grid-template-columns: 18px 1fr;
+  gap: 15px;
+  padding-bottom: 32px;
 }
 
 .timeline-item:last-child {
@@ -341,18 +333,20 @@ body {
 }
 
 .timeline-item:not(:last-child)::before {
-  content: "";
   position: absolute;
-  top: 15px;
-  bottom: -1px;
-  left: 6px;
+  top: 14px;
+  bottom: 0;
+  left: 5px;
   width: 1px;
   background: var(--line);
+  content: "";
 }
 
 .timeline-marker {
-  width: 13px;
-  height: 13px;
+  position: relative;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
   margin-top: 5px;
   border: 1px solid var(--olive);
   border-radius: 50%;
@@ -363,22 +357,24 @@ body {
   margin: 0 0 5px;
   color: var(--olive);
   font-size: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
 }
 
-.timeline h3 {
-  margin: 0 0 7px;
+.timeline-item h3 {
+  margin: 0 0 6px;
   font-family: var(--serif);
   font-size: 25px;
   font-weight: 500;
 }
 
-.timeline-item > div:last-child > p:last-child {
+.timeline-item > div > p:last-child {
   margin: 0;
   color: #76736b;
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: 12px;
+  line-height: 1.7;
 }
+
+/* МЕСТО ПРОВЕДЕНИЯ */
 
 .location-section {
   background: var(--paper);
@@ -386,46 +382,43 @@ body {
 
 .location-card {
   max-width: 330px;
-  margin: 37px auto 0;
-  padding: 35px 17px;
-  border: 1px solid rgba(112, 119, 98, 0.28);
+  margin: 26px auto 0;
+  padding: 31px 15px;
+  border: 1px solid rgba(112, 119, 98, 0.26);
 }
 
 .location-floor {
   margin: 0;
   color: var(--olive);
   font-size: 10px;
-  letter-spacing: 0.23em;
+  letter-spacing: 0.2em;
 }
 
 .location-address {
-  margin: 22px 0 10px;
+  margin: 18px 0 8px;
   font-family: var(--serif);
   font-size: 24px;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .location-time {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .route-button {
   display: inline-flex;
+  min-height: 46px;
   align-items: center;
   justify-content: center;
-  gap: 13px;
-  min-height: 48px;
-  margin-top: 27px;
-  padding: 0 20px;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 0 17px;
   border: 1px solid var(--olive);
   color: var(--olive-dark);
   font-size: 11px;
   text-decoration: none;
-  transition:
-    color 0.25s ease,
-    background 0.25s ease;
 }
 
 .route-button:hover {
@@ -433,52 +426,59 @@ body {
   background: var(--olive);
 }
 
+/* СЕМЕЙНАЯ ФОТОГРАФИЯ */
+
 .family-section {
-  background: #f1efed;
+  background: #f0eeec;
 }
 
 .family-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 1125 / 1686;
   overflow: hidden;
-  background-image: var(--family-image);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.family-arc {
-  position: absolute;
-  top: 4%;
-  left: 50%;
-  z-index: 2;
-  width: 94%;
-  max-width: 475px;
+.family-image {
+  width: 100%;
   height: auto;
-  overflow: visible;
-  transform: translateX(-50%);
+  object-fit: contain;
 }
 
-.family-arc text {
-  fill: #3d4637;
-  font-family: var(--sans);
-  font-size: 12.3px;
-  font-weight: 500;
-  letter-spacing: 1.15px;
+.family-title {
+  position: absolute;
+  top: 8%;
+  right: 10px;
+  left: 10px;
+  z-index: 2;
+  color: #46503e;
+  text-align: center;
 }
 
-.family-arc .family-arc-second {
-  fill: #657056;
-  font-size: 11px;
-  letter-spacing: 1.05px;
+.family-title span,
+.family-title strong {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.family-title span {
+  font-size: clamp(18px, 5.5vw, 26px);
+  white-space: nowrap;
+}
+
+.family-title strong {
+  margin-top: 5px;
+  color: var(--olive);
+  font-size: clamp(17px, 5vw, 23px);
+  font-style: italic;
 }
 
 .family-bottom {
   position: absolute;
-  right: 0;
-  bottom: 5.5%;
-  left: 0;
+  right: 10px;
+  bottom: 6%;
+  left: 10px;
   z-index: 2;
   text-align: center;
 }
@@ -487,7 +487,7 @@ body {
   margin: 0 0 4px;
   color: var(--olive);
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 19px;
   font-style: italic;
 }
 
@@ -495,25 +495,23 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(28px, 8.5vw, 39px);
+  font-size: clamp(27px, 8vw, 36px);
   font-weight: 400;
 }
 
-.rsvp-section {
-  background: var(--cream);
-}
+/* АНКЕТА ГОСТЕЙ */
 
 .rsvp-form {
-  max-width: 345px;
-  margin: 38px auto 0;
+  max-width: 340px;
+  margin: 29px auto 0;
   text-align: left;
 }
 
 .rsvp-form label {
   display: block;
-  margin: 20px 0 8px;
+  margin: 18px 0 7px;
   color: var(--olive-dark);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .rsvp-form input,
@@ -525,11 +523,11 @@ body {
   padding: 12px;
   border: 1px solid rgba(102, 109, 90, 0.3);
   border-radius: 0;
-  outline: none;
+  outline: 0;
   color: var(--ink);
   background: transparent;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 13px;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -541,25 +539,27 @@ body {
 }
 
 .rsvp-form textarea {
-  min-height: 90px;
+  min-height: 88px;
   resize: vertical;
 }
 
 .rsvp-form button {
   width: 100%;
-  min-height: 52px;
-  margin-top: 24px;
+  min-height: 51px;
+  margin-top: 23px;
   border: 0;
   color: white;
   background: var(--olive);
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   cursor: pointer;
 }
 
+/* ПОДВАЛ */
+
 .footer {
-  padding: 30px 15px 40px;
+  padding: 27px 12px 34px;
   border-top: 1px solid rgba(94, 101, 82, 0.12);
   text-align: center;
 }
@@ -568,23 +568,25 @@ body {
   margin: 0;
   color: var(--olive-dark);
   font-size: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
 }
 
 .footer span {
   display: block;
-  margin-top: 8px;
+  margin-top: 7px;
   color: var(--muted);
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 }
+
+/* ПЛАВНОЕ ПОЯВЛЕНИЕ */
 
 .reveal {
   opacity: 0;
-  transform: translateY(35px);
+  transform: translateY(22px);
   transition:
-    opacity 0.9s ease,
-    transform 0.9s ease;
+    opacity 0.75s ease,
+    transform 0.75s ease;
 }
 
 .reveal.visible {
@@ -592,24 +594,47 @@ body {
   transform: translateY(0);
 }
 
+/* НЕБОЛЬШИЕ ТЕЛЕФОНЫ */
+
 @media (max-width: 360px) {
   .section {
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
-  .hero h1 {
-    gap: 7px;
+  .hero-heading h1 {
+    font-size: 35px;
   }
 
-  .family-arc text {
-    font-size: 11px;
+  .family-title span {
+    font-size: 18px;
   }
 
-  .family-arc .family-arc-second {
-    font-size: 10px;
+  .family-title strong {
+    font-size: 17px;
+  }
+
+  .hero-footer {
+    right: 13px;
+    left: 13px;
+    font-size: 8px;
   }
 }
+
+/* ТЕЛЕФОН БЕЗ БОКОВЫХ ПОЛЕЙ */
+
+@media (max-width: 520px) {
+  body {
+    background: var(--cream);
+  }
+
+  .invitation {
+    max-width: none;
+    box-shadow: none;
+  }
+}
+
+/* ДЛЯ ТЕХ, КТО ОТКЛЮЧИЛ АНИМАЦИЮ */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -623,250 +648,4 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-.hero {
-  min-height: 100svh;
-}
-
-.hero-photo {
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-color: #f0eeec;
-}
-/* Приглашение всегда имеет ширину телефона */
-.invitation {
-  width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
-}
-
-/* Титульное фото: вертикальный формат */
-.hero {
-  width: 100%;
-  min-height: auto;
-  aspect-ratio: 1125 / 1686;
-}
-
-.hero-photo {
-  inset: 0;
-  background-size: cover;
-  background-position: center center;
-}
-
-/* Имена располагаются на свободном месте над головами */
-.hero-top {
-  top: 5%;
-}
-
-/* Семейная фотография тоже вертикальная */
-.family-photo {
-  width: 100%;
-  aspect-ratio: 1125 / 1686;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Надпись строго над головами */
-.family-arc {
-  top: 3%;
-}
-/* Приближаем фото: лица становятся заметнее */
-.hero-photo {
-  background-size: 120%;
-  background-position: center 36%;
-  background-repeat: no-repeat;
-}
-
-/* Убираем мутный слой поверх фотографии */
-.hero-photo::after {
-  background: none;
-}
-
-/* Поднимаем надпись выше */
-.hero-top {
-  top: 4%;
-}
-.hero {
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  aspect-ratio: 1125 / 1686;
-  background: #f3f0ee;
-}
-
-.hero-photo {
-  background-image: var(--cover-image);
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  filter: none;
-  transform: none;
-}
-
-.hero-photo::after {
-  display: none;
-}
-
-.hero-top {
-  top: 3.5%;
-}
-
-.hero h1 {
-  margin-top: 8px;
-  font-size: clamp(35px, 9vw, 46px);
-}
-
-.hero-date {
-  margin-top: 7px;
-}
-.hero-top {
-  top: 3%;
-}
-
-.hero h1 {
-  margin: 6px 0 3px;
-  font-size: clamp(32px, 8vw, 42px);
-}
-
-.hero-date {
-  margin-top: 4px;
-  font-size: 10px;
-}
-.hero-date {
-  position: absolute;
-  top: 860%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
-.family-title {
-  position: absolute;
-  top: 4%;
-  left: 50%;
-  z-index: 5;
-  width: 92%;
-  transform: translateX(-50%);
-  color: #46503e;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.family-title span,
-.family-title strong {
-  display: block;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 500;
-  line-height: 1.1;
-}
-
-.family-title span {
-  font-size: clamp(22px, 6.5vw, 34px);
-}
-
-.family-title strong {
-  margin-top: 5px;
-  color: #737d60;
-  font-size: clamp(17px, 5vw, 25px);
-  font-style: italic;
-  text-transform: none;
-}
-/* Уменьшаем расстояние между разделами */
-.section {
-  padding-top: 55px;
-  padding-bottom: 55px;
-}
-
-/* Убираем лишнюю высоту блока приглашения */
-.intro {
-  min-height: auto;
-}
-
-/* Компактнее заголовки и содержимое */
-.section-title {
-  margin: 12px 0 18px;
-}
-
-.calendar-wrap {
-  margin-top: 20px;
-}
-
-.timeline {
-  margin-top: 30px;
-}
-
-.location-card {
-  margin-top: 22px;
-}
-
-.rsvp-form {
-  margin-top: 25px;
-}
-.family-title {
-  top: 8%;
-  width: 90%;
-  text-transform: none;
-}
-
-.family-title span,
-.family-title strong {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0.3px;
-}
-
-.family-title span {
-  font-size: clamp(17px, 4.6vw, 23px);
-  white-space: nowrap;
-}
-
-.family-title strong {
-  margin-top: 5px;
-  font-size: clamp(16px, 4.3vw, 21px);
-  font-style: italic;
-  color: #737d60;
-}
-/* Сайт занимает всю ширину телефона */
-html,
-body {
-  width: 100%;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-.invitation {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-/* Заголовки больше не налезают друг на друга */
-.section-title {
-  font-size: 46px;
-  line-height: 1.15;
-  letter-spacing: normal;
-}
-
-.section-title em {
-  display: block;
-  margin-top: 5px;
-  font-size: 34px;
-  line-height: 1.2;
-  letter-spacing: normal;
-}
-
-/* Обычный текст становится читаемым */
-.intro-text,
-.rsvp-description {
-  font-size: 14px;
-  line-height: 1.7;
-}
-.hero-photo {
-  background-image: url("https://i.ibb.co/FkDD8WQ6/IMG-1497.jpg") !important;
-}
-
-.family-photo {
-  background-image: url("https://i.ibb.co/kgkrwGc1/IMG-1498.jpg") !important;
 }
