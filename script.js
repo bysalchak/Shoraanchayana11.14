@@ -1,4 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const invitationCover =
+    document.getElementById("invitationCover");
+
+  const openInvitation =
+    document.getElementById("openInvitation");
+
+  const backgroundMusic =
+    document.getElementById("backgroundMusic");
+
+  if (
+    invitationCover &&
+    openInvitation &&
+    backgroundMusic
+  ) {
+    document.body.style.overflow = "hidden";
+
+    openInvitation.addEventListener(
+      "click",
+      () => {
+        backgroundMusic.src =
+          "https://www.youtube.com/embed/AXmEFS1V_H8?autoplay=1&loop=1&playlist=AXmEFS1V_H8&controls=0&rel=0&playsinline=1";
+
+        invitationCover.classList.add(
+          "opened"
+        );
+
+        document.body.style.overflow = "";
+
+        window.setTimeout(() => {
+          invitationCover.remove();
+        }, 850);
+      }
+    );
+  }
   const revealElements =
     document.querySelectorAll(".reveal");
 
