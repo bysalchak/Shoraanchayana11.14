@@ -18,8 +18,32 @@ document.addEventListener("DOMContentLoaded", () => {
     openInvitation.addEventListener(
       "click",
       () => {
-        backgroundMusic.src =
-          "https://www.youtube.com/embed/AXmEFS1V_H8?autoplay=1&loop=1&playlist=AXmEFS1V_H8&controls=0&rel=0&playsinline=1";
+        backgroundMusic.contentWindow.postMessage(
+  JSON.stringify({
+    event: "command",
+    func: "unMute",
+    args: []
+  }),
+  "*"
+);
+
+backgroundMusic.contentWindow.postMessage(
+  JSON.stringify({
+    event: "command",
+    func: "setVolume",
+    args: [100]
+  }),
+  "*"
+);
+
+backgroundMusic.contentWindow.postMessage(
+  JSON.stringify({
+    event: "command",
+    func: "playVideo",
+    args: []
+  }),
+  "*"
+);
 
         invitationCover.classList.add(
           "opened"
