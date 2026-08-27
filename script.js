@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "click",
       () => {
         backgroundMusic.volume = 0.8;
-
+backgroundMusic.currentTime = 13;
 backgroundMusic.play().catch((error) => {
   console.log("Музыка не запустилась:", error);
 });
