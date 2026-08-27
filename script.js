@@ -18,32 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
     openInvitation.addEventListener(
       "click",
       () => {
-        backgroundMusic.contentWindow.postMessage(
-  JSON.stringify({
-    event: "command",
-    func: "unMute",
-    args: []
-  }),
-  "*"
+        backgroundMusic.volume = 0.8;
+
+backgroundMusic.play().catch((error) => {
+  console.log("Музыка не запустилась:", error);
+});
+
+invitationCover.classList.add(
+  "opened"
 );
 
-backgroundMusic.contentWindow.postMessage(
-  JSON.stringify({
-    event: "command",
-    func: "setVolume",
-    args: [100]
-  }),
-  "*"
-);
+document.body.style.overflow = "";
 
-backgroundMusic.contentWindow.postMessage(
-  JSON.stringify({
-    event: "command",
-    func: "playVideo",
-    args: []
-  }),
-  "*"
-);
+window.setTimeout(() => {
+  invitationCover.remove();
+}, 850);
 
         invitationCover.classList.add(
           "opened"
