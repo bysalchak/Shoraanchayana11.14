@@ -7,6 +7,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const backgroundMusic =
     document.getElementById("backgroundMusic");
+    const musicStartTime = 13;
+
+function prepareMusic() {
+  backgroundMusic.currentTime =
+    musicStartTime;
+}
+
+if (backgroundMusic.readyState >= 1) {
+  prepareMusic();
+} else {
+  backgroundMusic.addEventListener(
+    "loadedmetadata",
+    prepareMusic,
+    { once: true }
+  );
+}
+
+backgroundMusic.load();
 
   if (
     invitationCover &&
@@ -19,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "click",
       () => {
         backgroundMusic.volume = 0.8;
-backgroundMusic.currentTime = 13;
+
 backgroundMusic.play().catch((error) => {
   console.log("Музыка не запустилась:", error);
 });
