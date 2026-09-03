@@ -816,3 +816,23 @@ img {
   bottom: 5px;
   transform: rotate(195deg);
 }
+.timeline-address {
+  margin: 0 0 8px;
+  color: var(--olive-dark);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.adults-section {
+  background: var(--paper);
+}
+
+.adults-text {
+  max-width: 315px;
+  margin: 0 auto;
+  color: #6d6a61;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+}
