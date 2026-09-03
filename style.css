@@ -60,9 +60,12 @@ img {
 }
 
 .hero-image {
+  display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100svh;
+  min-height: 620px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .hero-heading {
@@ -778,4 +781,17 @@ img {
   border: 0;
   opacity: 0.01;
   pointer-events: none;
+}
+/* ФОТОГРАФИЯ РУК */
+
+.hands-section {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hands-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
