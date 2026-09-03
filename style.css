@@ -800,25 +800,19 @@ img {
   border: 1px solid rgba(121, 130, 100, 0.25);
 }
 
-.hands-leaf {
-  position: absolute;
+.hands-branch {
   z-index: 2;
-  color: var(--olive);
-  font-family: var(--serif);
-  font-size: 75px;
-  line-height: 1;
-  opacity: 0.75;
-  pointer-events: none;
+  width: 85px;
 }
 
-.hands-leaf-left {
-  top: -4px;
-  left: -10px;
-  transform: rotate(-25deg);
+.hands-branch-left {
+  top: 5px;
+  left: -15px;
+  transform: rotate(15deg);
 }
 
-.hands-leaf-right {
-  right: -10px;
-  bottom: -4px;
-  transform: rotate(155deg);
+.hands-branch-right {
+  right: -15px;
+  bottom: 5px;
+  transform: rotate(195deg);
 }
